@@ -1,4 +1,4 @@
-export const startup = {
+export const mobile = {
   namespaced: true,
   state: {},
   mutations: {},

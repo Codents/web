@@ -1,14 +1,14 @@
-import Counter from 'components/Counter'
+import Counter from 'components/Counter';
 
 export default {
-  render(h) {
+  render() {
     return (
-      <div class="page">
+      <div className='page'>
         <Counter />
         <p>
           To get started, edit files in <code>./client</code> and save.
         </p>
       </div>
-    )
-  }
-}
+    );
+  },
+};

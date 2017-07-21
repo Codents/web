@@ -1,4 +1,4 @@
-export const startup = {
+export const web = {
   namespaced: true,
   state: {},
   mutations: {},
