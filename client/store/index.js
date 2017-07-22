@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { clients, products } from '../modules';
-import { enterprise } from '../modules/clients/enterprise';
+import { clients, products, home } from '../modules';
 
 Vue.use(Vuex)
 
@@ -33,7 +32,8 @@ const store = new Vuex.Store({
   actions,
   modules: {
     clients,
-    products,
+    products
+    home,
   },
 });
 
