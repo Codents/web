@@ -39,8 +39,14 @@
     "ie > 8"
   ],
   "dependencies": {
+    "babel-eslint": "^7.2.3",
     "babel-runtime": "^6.18.0",
+<<<<<<< HEAD
     "jquery": "^3.2.1",
+=======
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+>>>>>>> 8d429da4458ca35f4864de2b0e50088d3a588616
     "promise-polyfill": "^6.0.2",
     "vue": "^2.2.0",
     "vue-router": "^2.0.0",

@@ -5,6 +5,7 @@ import { enterprise } from './clients/enterprise';
 import { startup } from './clients/startup';
 import { web } from './products/web';
 import { mobile } from './products/mobile';
+import { home } from './modules/home';
 
 const clients = {
   namespaced: true,
@@ -22,4 +23,11 @@ const products = {
   },
 };
 
-export { clients, products };
+const home = {
+  namespaced: true,
+  modules: {
+    home,
+  },
+};
+
+export { clients, productsme, home };

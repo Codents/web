@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
-import { clients, products } from '../modules';
+import { clients, products, home } from '../modules';
 import { es, en } from '../i18n';
 
 Vue.use(Vuex);
@@ -18,6 +18,7 @@ const store = new Vuex.Store({
   modules: {
     clients,
     products,
+    home,
   },
 });
 
