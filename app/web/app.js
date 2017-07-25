@@ -1,3 +1,6 @@
+/*
+ * https://www.sitepoint.com/introducing-the-css-grid-layout/
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
