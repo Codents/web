@@ -1,6 +1,7 @@
 /*
  * https://github.com/egoist/vuepack
  * https://github.com/vuejs/vuex/tree/dev/examples
+ * https://coverr.co/
  */
 import Vue from 'vue';
 import { sync } from 'vuex-router-sync';

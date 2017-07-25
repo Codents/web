@@ -1,30 +1,14 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import vuexI18n from 'vuex-i18n';
 import { clients, products } from '../modules';
-import { enterprise } from '../modules/clients/enterprise';
+import { es, en } from '../i18n';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-const state = {
-  count: 0
-}
-
-const mutations = {
-  INCREMENT (state) {
-    state.count++
-  },
-  DECREMENT (state) {
-    state.count--
-  }
-}
-
-const actions = {
-  incrementAsync ({ commit }) {
-    setTimeout(() => {
-      commit('INCREMENT')
-    }, 200)
-  }
-}
+const state = {};
+const mutations = {};
+const actions = {};
 
 console.log(clients, products);
 const store = new Vuex.Store({
@@ -37,4 +21,9 @@ const store = new Vuex.Store({
   },
 });
 
-export default store
+Vue.use(vuexI18n.plugin, store);
+Vue.i18n.add('en', en);
+Vue.i18n.add('de', es);
+Vue.i18n.set(navigator.languaje);
+
+export default store;

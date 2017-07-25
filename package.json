@@ -20,9 +20,12 @@
   },
   "babel": {
     "presets": [
-      ["vue-app", {
-        "useBuiltIns": true
-      }]
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true
+        }
+      ]
     ]
   },
   "postcss": {
@@ -31,13 +34,18 @@
       "postcss-nested": {}
     }
   },
-  "browserslist": ["last 2 versions", "ie > 8"],
+  "browserslist": [
+    "last 2 versions",
+    "ie > 8"
+  ],
   "dependencies": {
     "babel-runtime": "^6.18.0",
+    "jquery": "^3.2.1",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.2.0",
     "vue-router": "^2.0.0",
     "vuex": "^2.0.0",
+    "vuex-i18n": "^1.4.3",
     "vuex-router-sync": "^4.0.0"
   },
   "devDependencies": {
