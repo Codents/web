@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/chrissearle/web-hello-world.png?branch=master)](https://travis-ci.org/chrissearle/web-hello-world)
+[![Build Status](https://travis-ci.org/Codents/web.png?branch=prototype-react)](https://travis-ci.org/Codents/web)
 # **Codents Web**
 
 _Como instalar el proyecto [rama: prototype-react]_

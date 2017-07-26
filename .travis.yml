@@ -10,6 +10,7 @@ deploy:
     api_key:
         secure: 13a4a519-037f-4eba-9ebe-f03325d313a8
     app: codents-web
+    skip_cleanup: true
     on:
         repo: Codents/web
         branch: prototype-react
