@@ -3,6 +3,9 @@
     "main.menu.about": "ABOUT",
     "main.menu.contact": "CONTACT",
     "main.message.up.left": "NO LIMITS",
-    "main.message.down.left": "CODENTS </> WEB/DEV COMPANY",
-    "video.nosupported": "Your browser does not support the video tag. I suggest you upgrade your browser.",
+    "main.text.company.name": "CODENTS",
+    "main.text.company.symbol": "</>",
+    "main.text.company.target": "WEB/MOBILE",
+    "main.text.company": "COMPANY",
+    "video.nosupported": "Your browser does not support the video tag. I suggest you upgrade your browser."
 }

@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    color: white;
+}
+.menu {
+    position: absolute;
+    z-index: 5;
+    font-family: monospace;
+    text-transform: uppercase;
+    right: 3px;
+    font-size: 0.8em;
+}
+
+.message {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    bottom: 15%;
+    left: 30px;
+    font-family: monospace;
+    font-size: 3.8em;
+    font-weight: bold;
+}
+@font-face {
+    font-family: raleway;
+    src: url('../../assets/fonts/raleway_thin-webfont.woff');
+}

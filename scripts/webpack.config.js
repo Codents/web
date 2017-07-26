@@ -9,8 +9,9 @@ const ifs = require('os').networkInterfaces();
 let Conf = require('../.appconf.json');
 
 const jsSourcePath = path.join(__dirname, '../app/web');
-const imgPath = path.join(__dirname, '../app/assets/img');
-const fontsPath = path.join(__dirname, '../app/assets/fonts');
+const imgPath = path.join(__dirname, '../app/web/assets/img');
+const moviesPath = path.join(__dirname, '../app/web/assets/mov');
+const fontsPath = path.join(__dirname, '../app/web/assets/fonts');
 const buildPath = path.join(__dirname, '../build/web');
 const sourcePath = path.join(__dirname, '../app');
 Conf.ENV.loc = Object.keys(ifs)
@@ -49,7 +50,8 @@ module.exports = env => {
   const plugins = [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'vendor-[hash].js',
+      // filename: 'vendor-[hash].js',
+      filename: 'vendor.js',
       minChunks(module) {
         const context = module.context;
         return context && context.indexOf('node_modules') >= 0;
@@ -76,7 +78,7 @@ module.exports = env => {
       PLATFORM: JSON.stringify(env.platform),
       VERSION: JSON.stringify(env.version),
       REST_API: REST_API,
-      LANGUAJE: JSON.stringify(env.lang),
+      LANGUAJE: JSON.stringify(env.languaje),
       'process.env': {
         NODE_ENV: env.target === 'dev'
           ? JSON.stringify('development')
@@ -101,6 +103,11 @@ module.exports = env => {
       test: /.*\.(woff|woff2|eot|ttf)$/i,
       include: fontsPath,
       use: 'file-loader?hash=sha512&digest=hex&name=./assets/[hash].[ext]',
+    },
+    {
+      test: /.*\.(webm|mp4|ogv)$/i,
+      include: moviesPath,
+      use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
     },
   ];
 

@@ -2,16 +2,15 @@ import * as actions from './actions';
 
 export default (
   state = {
-    isFetching: false,
-    isAuthenticated: false,
+    date: new Date(),
   },
   action
 ) => {
   switch (action.type) {
-    case actions.INIT_LOGIN:
+    case actions.INIT_APP:
       return {
-        isFetching: false,
-        isAuthenticated: false,
+        ...state,
+        date: action.date,
       };
     default:
       return state;

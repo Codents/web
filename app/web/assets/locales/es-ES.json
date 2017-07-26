@@ -3,6 +3,9 @@
     "main.menu.about": "ACERCA",
     "main.menu.contact": "CONTACTO",
     "main.message.up.left": "CREATIVIDAD SIN LIMITES",
-    "main.message.down.left": "CODENTS </> WEB/DEV COMPANY",
-    "video.nosupported": "Tu navegador no soporta video tag. Te sugiero que lo actualices.",
+    "main.text.company.name": "CODENTS",
+    "main.text.company.symbol": "</>",
+    "main.text.company.target": "WEB/MOBILE",
+    "main.text.company": "COMPAÑIA",
+    "video.nosupported": "Tu navegador no soporta video tag. Te sugiero que lo actualices."
 }

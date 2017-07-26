@@ -1,0 +1,38 @@
+video#bgvid {
+    opacity: 0.8;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url("../../../../assets/img/keyboardTyping.jpg") no-repeat;
+    background-size: cover;
+}
+
+.video-filter {
+    /*background: rgba(0,0,0,.35) url("../../../../assets/img/bg-pixel.png") 0 0 repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;*/
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+        background: url("../../../../assets/img/keyboardTyping.jpg") #000 no-repeat center center fixed;
+    }
+
+    #bgvid {
+        display: none;
+    }
+}

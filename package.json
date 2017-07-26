@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk index.js",
-    "test": "node node_modules/webpack-dashboard/bin/webpack-dashboard.js -t 'test' -- node node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.config.js --colors --no-info  --env.target='dev' --env.env='loc' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'",
+    "watch": "node node_modules/webpack-dashboard/bin/webpack-dashboard.js -t 'test' -- node node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.config.js --colors --no-info  --env.target='dev' --env.env='loc' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'",
     "build": "node node_modules/webpack/bin/webpack.js --config ./scripts/webpack.config.js --progress --profile --colors --env.target='prod' --env.env='prod' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "file-loader": "^0.11.1",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
