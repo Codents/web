@@ -1,8 +1,8 @@
 import React from 'react';
 
-import videoMp4 from '../../../../assets/mov/keyboardTyping.mp4';
-import videoWebm from '../../../../assets/mov/keyboardTyping.webm';
-import poster from '../../../../assets/img/keyboardTyping.jpg';
+import videoMp4 from './mov/keyboardTyping.mp4';
+import videoWebm from './mov/keyboardTyping.webm';
+import poster from './img/keyboardTyping.jpg';
 import './styles.scss';
 
 const VideoBG = () =>

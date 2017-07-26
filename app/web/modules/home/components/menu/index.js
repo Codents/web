@@ -1,34 +1,40 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
-import github from '../../../../assets/img/github-icon-white.png';
+import github from './img/github-icon-white.png';
 import './styles.scss';
 
 const Menu = () =>
   (<nav id='menu' className='menu'>
     <ul>
       <li>
-        <a href='#about'>
+        <Link to='/about'>
           <FormattedMessage id='main.menu.about' />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href='#works'>
+        <Link to='/works'>
           <FormattedMessage id='main.menu.work' />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href='#contacts'>
+        <Link to='/contacts'>
           <FormattedMessage id='main.menu.contact' />
-        </a>
+        </Link>
+      </li>
+      <li>
+        <Link to='/login'>
+          <FormattedMessage id='main.menu.signin' />
+        </Link>
       </li>
       <li>
         <a>|</a>
       </li>
       <li>
-        <a href='https://github.com/Codents/web'>
+        <Link to='https://github.com/Codents/web'>
           <img src={ github } alt='github.com' />
-        </a>
+        </Link>
       </li>
     </ul>
   </nav>);

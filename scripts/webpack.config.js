@@ -96,17 +96,17 @@ module.exports = env => {
     },
     {
       test: /\.(png|gif|jpg|svg)$/,
-      include: imgPath,
+      //include: imgPath,
       use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
     },
     {
       test: /.*\.(woff|woff2|eot|ttf)$/i,
-      include: fontsPath,
+      //include: fontsPath,
       use: 'file-loader?hash=sha512&digest=hex&name=./assets/[hash].[ext]',
     },
     {
       test: /.*\.(webm|mp4|ogv)$/i,
-      include: moviesPath,
+      //include: moviesPath,
       use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
     },
   ];
