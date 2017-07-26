@@ -5,3 +5,10 @@ install:
     - npm install
 script:
     - npm run build
+deploy:
+    provider: heroku
+    api_key:
+        secure: 13a4a519-037f-4eba-9ebe-f03325d313a8
+    app: codents-web
+    on:
+        repo: codents/codents-web
