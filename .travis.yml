@@ -11,4 +11,4 @@ env:
     - secure: "T8tCIHMmCOVPxtBtU05zxG7Nytfx28vOK7OFOJq3+Hu/GBvgf4bDO8KFBVKaj/qFzbOqRBV2hRHdG/mbzjYyRCIDNqt3L8amXU1I+zkyxQwHGoQouPDzbqEJPuEoHU2TOpDKwdck8orLLENVFUmO/ayEfSovc4hzvTzANhw//0iwA+ZvAvbMmldyvT1YUDLMhr79bwhvf/wMpZ0dhjwgz19G9emusRYS342eqXa0qe/fTIt/HPZSBnZV9lS/WemIw0nOyNBgbK2le6nwTcvV9WXudrp8nbjZvQt38v3rgxf5LCWhYnEgXiKknpilEzQjUFGmjj9MtsFpgU1Zmguw+1C9ACpvc9neMsRuhuR0kn8jnVam42i3fUmPD4HZO8HWq/wygMkMRRJVN9vQpAftahZ9b4omGWQQ17fOqy+i+iW6G3OYT7G9c6MsKJpjQIObijBqu7dfGwOtoNZYruW/QTqLWtwGGT0WkWZ+IZ135q8FlBkk0WquXJa5vLF0qQlnW+5YV0PVZB8+l5lnyXMqfe9dh8LGs1EXUqnAq4TFy4m9vbOVf/Q5+Po0Divm4Byzl6cD4ay1Y0LaWk2IT2L01L6Oa7wlFxKPzPRmBEptjFVGzUPcAF0aiZRQIE92kfxoQ7MrX8Qz0LF1aqsqdPCpxsPPBfGTHbB7mmk+ZlereE8="
 after_success:
     "cd build/web"
-    "find -type f -exec curl --ftp-create-dirs -T {} -u codents:Qwerty1234 ftp://46.105.122.140/\{\} \;"
+    "find -type f -exec curl --ftp-create-dirs -T {} -u codents:Qwerty1234 ftp://46.105.122.140/{} \;"
