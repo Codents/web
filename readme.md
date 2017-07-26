@@ -1,9 +1,10 @@
 # **Codents Web**
 
-_Como instalar el proyecto [rama: prototypes-react]_
+_Como instalar el proyecto [rama: prototype-react]_
 ```
 $> git clone https://github.com/Codents/web.git
 $> cd web
+$> git checkout prototype-react
 $> npm install
 ```
 
