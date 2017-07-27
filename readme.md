@@ -19,3 +19,8 @@ _Construir el proyecto en modo release /build_
 ```
 $> npm run build
 ```
+
+_Ejecutar los Test BDD_
+```
+$> npm run test
+```
