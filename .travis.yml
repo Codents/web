@@ -5,10 +5,12 @@ install:
     - npm install
 script:
     - npm run build
-env:
-  global:
-    - secure: "Rd4aqAL4vnAz+PNWIopX+UNoMOiPk/Vyw2nRofZqt0kW1sBLLlBE5O+ysya/0nZvdN35d3BhvaQ7HsDrMvYQjzkVL+p3rpvuAN73PhNyvrkxtASc2RxssB1IQIcKXdp9pocDN+DkEnEBQrw8OxSgfB4ZgOVG8oSYOykFtvVglkUwx0bQY70p3bIGPmhAoEN76Aewvc8YXV5NwXpB9xZxLxJG7UjV2Sv3JjfBtPj6eEVs3LTGcpgxr8PZI5xmQD4yOqU4d6ab46zY+xhnuc/wp4VkFdy/wpHBZcy/e1YEgvkwioMdzXd6ZMfZQIl00CoX/7RAdGoCrK1N3epG8SKoFCery6JoE2K2ZN5z2+fF9xuqzrHlCFFW4LnJ0CVCFcxuV47to+d2QJHDU6WYnLm5aWQqSzUTjRacvxYEPGBVYNxu2dfORYaRRy4HfTKnwRoGVKka24CyprbWivyStnwuyovEbO8938fOomeS2xdNsIOIIjidwNM0bSw0wttTz9t6I2R9MMTPPonxbJ57TLtjOtklSwnaUVp68UPG3/Jhg2OrhY1Ob2UhOtZWqS2joQgfv+ktmAOX0ZV8P3b9dq6OJazXy8Am7NQQpyi180x7WQ9ZzwAXBKzI7tvZlGQpi17e6Zzf2skrWGHqoSIzHIuwARer9nintFQpoNg00CCkZpU="
-    - secure: "T8tCIHMmCOVPxtBtU05zxG7Nytfx28vOK7OFOJq3+Hu/GBvgf4bDO8KFBVKaj/qFzbOqRBV2hRHdG/mbzjYyRCIDNqt3L8amXU1I+zkyxQwHGoQouPDzbqEJPuEoHU2TOpDKwdck8orLLENVFUmO/ayEfSovc4hzvTzANhw//0iwA+ZvAvbMmldyvT1YUDLMhr79bwhvf/wMpZ0dhjwgz19G9emusRYS342eqXa0qe/fTIt/HPZSBnZV9lS/WemIw0nOyNBgbK2le6nwTcvV9WXudrp8nbjZvQt38v3rgxf5LCWhYnEgXiKknpilEzQjUFGmjj9MtsFpgU1Zmguw+1C9ACpvc9neMsRuhuR0kn8jnVam42i3fUmPD4HZO8HWq/wygMkMRRJVN9vQpAftahZ9b4omGWQQ17fOqy+i+iW6G3OYT7G9c6MsKJpjQIObijBqu7dfGwOtoNZYruW/QTqLWtwGGT0WkWZ+IZ135q8FlBkk0WquXJa5vLF0qQlnW+5YV0PVZB8+l5lnyXMqfe9dh8LGs1EXUqnAq4TFy4m9vbOVf/Q5+Po0Divm4Byzl6cD4ay1Y0LaWk2IT2L01L6Oa7wlFxKPzPRmBEptjFVGzUPcAF0aiZRQIE92kfxoQ7MrX8Qz0LF1aqsqdPCpxsPPBfGTHbB7mmk+ZlereE8="
-after_success:
-    cd build/web
-    find -type f -exec curl --ftp-create-dirs -T {} -u codents:Qwerty1234 ftp://46.105.122.140/{} ;
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: de17f1223298d09c167982655fcbbad4c0b4e2fb
+    localdir: build/web
+    name: travisCI
+    on:
+        branch: prototype-react
+        repo: Codents/web
