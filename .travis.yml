@@ -10,7 +10,7 @@ deploy:
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     project_name: web
-    localdir: build/web
+    localdir: build
     name: travisCI
     on:
         branch: prototype-react
