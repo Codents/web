@@ -8,7 +8,7 @@ script:
 deploy:
     provider: pages
     skip_cleanup: true
-    github_token: 1eca60fc99e092f51221dc1718b16e64f86719a1
+    github_token: 89163141c1b622ae9977c4ed66e9e900677b8e15
     project_name: web
     localdir: build/web
     name: travisCI
