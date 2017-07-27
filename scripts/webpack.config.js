@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const ifs = require('os').networkInterfaces();
-let Conf = require('../.appconf.json');
+const Conf = require('../.appconf.json');
 
 const jsSourcePath = path.join(__dirname, '../app/web');
 const imgPath = path.join(__dirname, '../app/web/assets/img');
@@ -30,7 +30,9 @@ module.exports = env => {
   normalizeEnvVars(env);
   const isProduction = env.target === 'prod';
   console.log(
-    `Compiling for ${ env.target === 'dev' ? JSON.stringify('development') : JSON.stringify('production') }`
+    `Compiling for ${ env.target === 'dev'
+      ? JSON.stringify('development')
+      : JSON.stringify('production') }`
   );
   let REST_API;
 
@@ -50,8 +52,7 @@ module.exports = env => {
   const plugins = [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      // filename: 'vendor-[hash].js',
-      filename: 'vendor.js',
+      filename: 'vendor-[hash].js',
       minChunks(module) {
         const context = module.context;
         return context && context.indexOf('node_modules') >= 0;
@@ -77,12 +78,11 @@ module.exports = env => {
       TARGET: JSON.stringify(env.target),
       PLATFORM: JSON.stringify(env.platform),
       VERSION: JSON.stringify(env.version),
-      REST_API: REST_API,
+      REST_API,
       LANGUAJE: JSON.stringify(env.languaje),
       'process.env': {
-        NODE_ENV: env.target === 'dev'
-          ? JSON.stringify('development')
-          : JSON.stringify('production'),
+        NODE_ENV:
+          env.target === 'dev' ? JSON.stringify('development') : JSON.stringify('production'),
       },
     }),
   ];
@@ -96,17 +96,17 @@ module.exports = env => {
     },
     {
       test: /\.(png|gif|jpg|svg)$/,
-      //include: imgPath,
+      // include: imgPath,
       use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
     },
     {
       test: /.*\.(woff|woff2|eot|ttf)$/i,
-      //include: fontsPath,
+      // include: fontsPath,
       use: 'file-loader?hash=sha512&digest=hex&name=./assets/[hash].[ext]',
     },
     {
       test: /.*\.(webm|mp4|ogv)$/i,
-      //include: moviesPath,
+      // include: moviesPath,
       use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
     },
   ];
@@ -148,11 +148,14 @@ module.exports = env => {
     });
   } else {
     entries = [
+      'react-hot-loader/patch',
       'webpack-dev-server/client?http://localhost:3000',
+      'webpack/hot/only-dev-server',
       'app.js',
     ];
     // Development plugins
     plugins.push(
+      new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
       new DashboardPlugin()
     );

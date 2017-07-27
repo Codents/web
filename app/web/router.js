@@ -13,7 +13,7 @@ export default class Routes extends Component {
     return (
       <Router>
         <div>
-          <Route exact path={ homePath } component={ Home } />
+          <Route path={ homePath } component={ Home } />
           <Route path={ aboutPath } component={ Home } />
           <Route path={ workPath } component={ Home } />
           <Route path={ contactPath } component={ Home } />

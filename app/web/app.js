@@ -35,6 +35,7 @@ const render = Component => {
 render(Router);
 
 if (module.hot) {
+  console.log('Hot loader actived');
   module.hot.accept('./router', () => {
     render(Router);
   });

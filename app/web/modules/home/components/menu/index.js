@@ -32,9 +32,9 @@ const Menu = () =>
         <a>|</a>
       </li>
       <li>
-        <Link to='https://github.com/Codents/web'>
+        <a hef='https://github.com/Codents/web'>
           <img src={ github } alt='github.com' />
-        </Link>
+        </a>
       </li>
     </ul>
   </nav>);

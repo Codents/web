@@ -1,0 +1,23 @@
+https://docs.travis-ci.com/user/deployment/pages/
+https://help.github.com/categories/github-pages-basics/
+
+.travis.yml
+languaje: node_js
+node_js:
+    - "7"
+install:
+    - node -v
+    - npm -v
+    - npm install
+script:
+    - npm run build
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    project_name: web
+    local_dir: build/web
+    name: travisCI
+    on:
+        branch: prototype-react
+        repo: Codents/web
