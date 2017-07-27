@@ -10,7 +10,7 @@ $> git checkout prototype-react
 $> npm install
 ```
 
-_Arrancar el proyecto en modo desarrollo y con watcher
+_Arrancar el proyecto en modo desarrollo y con watcher_
 ```
 $> npm run watch
 ```
