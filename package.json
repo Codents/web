@@ -4,6 +4,7 @@
   "description": "Codents Web",
   "main": "index.js",
   "scripts": {
+    "test": "node node_modules/cucumber/bin/cucumber.js test/bdd/features",
     "watch": "node node_modules/webpack-dashboard/bin/webpack-dashboard.js -t 'test' -- node node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.config.js --colors --no-info  --env.target='dev' --env.env='loc' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'",
     "dev": "node node_modules/webpack/bin/webpack.js --config ./scripts/webpack.config.js --progress --profile --colors --env.target='dev' --env.env='dev' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'",
     "build": "node node_modules/webpack/bin/webpack.js --config ./scripts/webpack.config.js --progress --profile --colors --env.target='prod' --env.env='prod' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'"
@@ -46,7 +47,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.23.0",
+    "chromedriver": "^2.29.0",
     "css-loader": "^0.28.0",
+    "cucumber": "^2.3.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-loader": "^1.7.1",
@@ -63,6 +66,7 @@
     "react-addons-test-utils": "^15.5.1",
     "redux-logger": "^3.0.1",
     "sass-loader": "^6.0.3",
+    "selenium-webdriver": "^3.4.0",
     "stats-webpack-plugin": "^0.6.0",
     "style-loader": "^0.16.1",
     "url-loader": "^0.5.8",
