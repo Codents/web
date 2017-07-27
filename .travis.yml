@@ -10,7 +10,6 @@ deploy:
     skip_cleanup: true
     github_token: 1eca60fc99e092f51221dc1718b16e64f86719a1
     project_name: web
-    target_branch: master
     localdir: build/web
     name: travisCI
     on:
