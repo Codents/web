@@ -11,9 +11,6 @@ class MainContainer extends Component {
     return (
       <div className='home-page'>
         <header>
-          <p className='message'>
-            <FormattedMessage id='main.message.up.left' />
-          </p>
           <Menu />
         </header>
         <footer>
