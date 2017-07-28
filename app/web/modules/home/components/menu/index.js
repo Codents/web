@@ -9,22 +9,22 @@ const Menu = () =>
   (<nav id='menu' className='menu'>
     <ul>
       <li>
-        <Link to='/about'>
+        <Link to='/about' className={ 'about-menu' }>
           <FormattedMessage id='main.menu.about' />
         </Link>
       </li>
       <li>
-        <Link to='/works'>
+        <Link to='/work' className={ 'work-menu' }>
           <FormattedMessage id='main.menu.work' />
         </Link>
       </li>
       <li>
-        <Link to='/contacts'>
+        <Link to='/contacts' className={ 'contact-menu' }>
           <FormattedMessage id='main.menu.contact' />
         </Link>
       </li>
       <li>
-        <Link to='/login'>
+        <Link to='/signin' className={ 'signin-menu' }>
           <FormattedMessage id='main.menu.signin' />
         </Link>
       </li>
@@ -32,7 +32,7 @@ const Menu = () =>
         <a>|</a>
       </li>
       <li>
-        <a href='https://github.com/Codents/web'>
+        <a href='https://github.com/Codents/web' className='github-icon'>
           <img src={ github } alt='github.com' />
         </a>
       </li>

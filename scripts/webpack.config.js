@@ -4,10 +4,12 @@ const path = require('path');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const ifs = require('os').networkInterfaces();
 const Conf = require('../.appconf.json');
 
+const rootPath = path.resolve(__dirname, '../');
 const jsSourcePath = path.join(__dirname, '../app/web');
 const imgPath = path.join(__dirname, '../app/web/assets/img');
 const moviesPath = path.join(__dirname, '../app/web/assets/mov');
@@ -50,6 +52,7 @@ module.exports = env => {
 
   // Common plugins
   const plugins = [
+    new CleanWebpackPlugin([path.join(buildPath, '*.*')], { root: rootPath, verbose: true, dry: false }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       filename: 'vendor-[hash].js',
