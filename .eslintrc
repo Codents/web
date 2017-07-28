@@ -46,6 +46,7 @@ rules:
     "exports": "always-multiline",
     "functions": "never"
   }]
+  prefer-arrow-callback: 0
   jsx-quotes: [2, "prefer-single"]
   jsx-a11y/media-has-caption: 0
   react/forbid-prop-types: 0

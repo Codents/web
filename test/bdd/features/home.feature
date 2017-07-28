@@ -6,26 +6,40 @@ Feature: Pagina Home
     I WANT poder visualiza la pagina principal o Home de la web
     IN ORDER TO poder navegar por todos los menus principales
 
-    Background: Visualizo correctamente la home
-    #Given Accedo a la Home en "https://codents.github.io/web"
-    Given Accedo a la Home en "http://localhost/home/malfaros/Desarrollos/Personal/web/build/web/"
     @menus
     Scenario Outline: Accedo a los menus principales
+        Given Accedo a la Home en <host>
         When Hago click en el menu <class>
         Then Estoy en la seccion <menu>
 
+    @local
     Examples:
-        | menu     | class         |
-        | ABOUT    | .about-menu   |
-        #| WORKS    | .work-menu    |
-        #| CONTACT  | .contact-menu |
-        #| SIGNIN   | .signin-menu  |
+        | menu     | class         | host                    |
+        | ABOUT    | .about-menu   | http://localhost:3000   |
+        | WORKS    | .work-menu    | http://localhost:3000   |
+        | CONTACT  | .contact-menu | http://localhost:3000   |
+        | SIGNIN   | .signin-menu  | http://localhost:3000   |
 
-    #@icons
-    #Scenario Outline: Acceso a los iconos del menu principal
-#        When Hago click en el icono de <icono>
-        #Then Estoy en pagina del proyecto en <icono>
+    @release
+    Examples:
+        | menu     | class         | host                            |
+        | ABOUT    | .about-menu   | https://codents.github.io/web   |
+        | WORKS    | .work-menu    | https://codents.github.io/web   |
+        | CONTACT  | .contact-menu | https://codents.github.io/web   |
+        | SIGNIN   | .signin-menu  | https://codents.github.io/web   |
 
-    #Examples:
-#        | icono        |
-#        | .github-icon |
+    @icons
+    Scenario Outline: Acceso a los iconos del menu principal
+        Given Accedo a la Home en <host>
+        When Hago click en el icono de <icono>
+        Then Estoy en pagina del proyecto en <icono>
+
+    @local
+    Examples:
+        | icono        | host                    |
+        | .github-icon | http://localhost:3000   |
+
+    @release
+    Examples:
+        | icono        | host                            |
+        | .github-icon | https://codents.github.io/web   |

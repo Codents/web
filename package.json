@@ -4,7 +4,8 @@
   "description": "Codents Web",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/cucumber/bin/cucumber.js test/bdd/features",
+    "test-local": "node node_modules/cucumber/bin/cucumber.js --tags @mandatory --tags @local test/bdd/features",
+    "test": "node node_modules/cucumber/bin/cucumber.js --tags @mandatory --tags @release test/bdd/features",
     "watch": "node node_modules/webpack-dashboard/bin/webpack-dashboard.js -t 'test' -- node node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.config.js --colors --no-info  --env.target='dev' --env.env='loc' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'",
     "dev": "node node_modules/webpack/bin/webpack.js --config ./scripts/webpack.config.js --progress --profile --colors --env.target='dev' --env.env='dev' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'",
     "build": "node node_modules/webpack/bin/webpack.js --config ./scripts/webpack.config.js --progress --profile --colors --env.target='prod' --env.env='prod' --env.platform='web' --env.version='0.0.1' --env.languaje='EN'"
