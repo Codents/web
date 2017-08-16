@@ -23,13 +23,23 @@ defineSupportCode(({ Given, When, Then }) => {
       .then(element => element.click());
   });
 
-  Then(/^Estoy en pagina del proyecto en ([^"]*)$/, function (icono) {
-    const assert = new Assert();
-    if (icono === '.github-icon') {
-      return this.driver.wait(until.elementLocated(By.css('strong a')), 10000).then(element => {
-        assert.isTrue(element.getAttribute('href') === 'https://github.com/Codents/web');
-      });
+  Then(
+    /^Estoy en pagina del proyecto en "([^"]*)" y cliqueo en el icono con clase ([^"]*)$/,
+    function (githubUrl, icono) {
+      if (icono === '.github-icon') {
+        return this.driver.wait(until.elementLocated(By.css('strong a')), 10000).then(element => {
+          element
+            .getAttribute('href')
+            .then(function (attr) {
+              const assert = new Assert(attr === githubUrl);
+              assert.isTrue('Fallo al navegar hasta el proyecto en Github');
+            })
+            .catch(function (err) {
+              console.error(err);
+            });
+        });
+      }
+      return false;
     }
-    return false;
-  });
+  );
 });

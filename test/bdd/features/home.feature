@@ -32,7 +32,7 @@ Feature: Pagina Home
     Scenario Outline: Acceso a los iconos del menu principal
         Given Accedo a la Home en <host>
         When Hago click en el icono de <icono>
-        Then Estoy en pagina del proyecto en <icono>
+        Then Estoy en pagina del proyecto en "https://github.com/Codents/web" y cliqueo en el icono con clase <icono>
 
     @local
     Examples:
