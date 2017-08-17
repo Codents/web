@@ -22,5 +22,5 @@ deploy:
     local_dir: build/web
     name: travisCI
     on:
-        branch: prototype-react
+        branch: master
         repo: Codents/web
