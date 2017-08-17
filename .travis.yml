@@ -12,7 +12,6 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 script:
-    - npm run test
     - npm run build
 deploy:
     provider: pages
@@ -24,3 +23,5 @@ deploy:
     on:
         branch: master
         repo: Codents/web
+after_success:
+    - npm run test
