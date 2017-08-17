@@ -23,5 +23,5 @@ deploy:
     on:
         branch: master
         repo: Codents/web
-after_success:
+after_deploy:
     - npm run test
