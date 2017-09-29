@@ -8,6 +8,11 @@ import './styles.scss';
 const Menu = () =>
   (<nav id='menu' className='menu'>
     <ul>
+    <li>
+        <Link to='/' className={ 'home-menu' }>
+          <FormattedMessage id='main.menu.home' />
+        </Link>
+      </li>
       <li>
         <Link to='/about' className={ 'about-menu' }>
           <FormattedMessage id='main.menu.about' />

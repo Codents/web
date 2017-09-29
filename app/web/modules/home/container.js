@@ -9,7 +9,7 @@ import './styles.scss';
 class MainContainer extends Component {
   render() {
     return (
-      <div className='home-page'>
+      <section className='home-page'>
         <header>
           <Menu />
         </header>
@@ -24,7 +24,7 @@ class MainContainer extends Component {
           <br />
         </footer>
         <VideoBG className='video-bg' />
-      </div>
+      </section>
     );
   }
 }
