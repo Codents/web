@@ -1,12 +1,12 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import './styles.scss';
-
+//const message = FormattedHTMLMessage({id:'about.bioinfo.text'});
 const Bioinfo = () =>
   (
     <aside className='about-text'>
-      <FormattedMessage id='about.bioinfo.text' />
+      <FormattedHTMLMessage id='about.bioinfo.text' textComponent='aside.about-text' />
     </aside>
   );
 

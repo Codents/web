@@ -3,17 +3,26 @@ body {
     color: white;
 }
 .menu {
-    position: absolute;
+    position: relative;
+    float:right;
+    display: inline-block;
     z-index: 5;
     font-family: monospace;
     text-transform: uppercase;
-    right: 3px;
-    font-size: 0.8em;
+    margin:1rem;
+    font-size: 1em;
 }
+
+header {
+  width: 100%;
+display: inline-block;
+background-color: #f3f3f3;
+}
+
 
 footer {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 30px;
     font-family: monospace;
     font-size: 3.8em;

@@ -14,32 +14,32 @@ const Linkedin = () =>
       <nav>
         <ul>
           <li>
-            <a href='https://www.linkedin.com/in/alejandrodiegoo/?ppe=1'>
+            <a href='https://www.linkedin.com/in/alejandrodiegoo/?ppe=1' target="_blank">
               <img src={ alex } alt='Alejandro' className='profile-picture'/>
             </a>
           </li>
           <li>
-            <a href='https://github.com/Codents/web'>
+            <a href='https://github.com/Codents/web' target="_blank">
               <img src={ dani } alt='Daniel' className='profile-picture' />
             </a>
           </li>
           <li>
-            <a href='https://www.linkedin.com/in/gabrielandujar/'>
+            <a href='https://www.linkedin.com/in/gabrielandujar/' target="_blank">
               <img src={ gabi } alt='Gabriel' className='profile-picture' />
             </a>
           </li>
           <li>
-            <a href='https://github.com/Codents/web'>
+            <a href='https://github.com/Codents/web' target="_blank">
               <img src={ german } alt='German' className='profile-picture' />
             </a>
           </li>
           <li>
-            <a href='https://www.linkedin.com/in/manuel-alfaro-sierra-538b824b/?ppe=1'>
+            <a href='https://www.linkedin.com/in/manuel-alfaro-sierra-538b824b/?ppe=1' target="_blank">
               <img src={ manu } alt='Manuel' className='profile-picture' />
             </a>
           </li>
           <li>
-            <a href='https://www.linkedin.com/in/sergio-maldonado-fern%C3%A1ndez-39608a147/'>
+            <a href='https://www.linkedin.com/in/sergio-maldonado-fern%C3%A1ndez-39608a147/' target="_blank">
               <img src={ sergio } alt='Sergio' className='profile-picture' />
             </a>
           </li>

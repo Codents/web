@@ -3,6 +3,19 @@
 }
 
 .profile-picture {
-    width: 70px;
+    width: 3.8rem;
     border-radius: 50%;
+}
+nav ul {
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: inline-block;
+}
+
+nav ul li a:hover img {
+  opacity: .6;
 }
