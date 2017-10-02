@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <title>Codents</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><%= htmlWebpackPlugin.options.title %> </title>
+    <meta name="description" content="Codents_ es grupo de I+D+i con metodologías de trabajo dinámicas que nos permiten adaptarnos a las corrientes tecnológicas para dar la mejor solución en cada proyecto">
+
+    <meta property="og:url"                content="https://www.codents.net" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Codents_ Expandiendo la red." />
+    <meta property="og:description"        content="Codents_ es grupo de I+D+i con metodologías de trabajo dinámicas que nos permiten adaptarnos a las corrientes tecnológicas para dar la mejor solución en cada proyecto" />
+    <meta property="og:image"              content="https://www.codents.net/assets/codents_share.jpg" />
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--<link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">-->
     <meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
 
   <body>
-    <div id="app-container" class='app-container'></div>
+    <div id="app-container" class="app-container"></div>
   </body>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350235-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107350235-1');
+  </script>
 
 </html>

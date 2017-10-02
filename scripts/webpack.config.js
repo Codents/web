@@ -66,6 +66,7 @@ module.exports = env => {
       template: path.join(jsSourcePath, 'index.html'),
       path: buildPath,
       filename: 'index.html',
+      title: Conf.TITLE_DEFAULT
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
