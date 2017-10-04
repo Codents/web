@@ -23,6 +23,11 @@ nav ul li a {
     color: #333;
 }
 
+nav ul li a.active,
 nav ul li a:hover {
-    color: rgb(223, 223, 223);
+    color: rgb(129,200,63);
+}
+
+nav ul li a.active {
+  cursor: default;
 }
