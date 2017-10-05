@@ -19,6 +19,7 @@ class MainContainer extends Component {
           <meta property="og:description"        content="Codents_ es grupo de I+D+i con metodologías de trabajo dinámicas que nos permiten adaptarnos a las corrientes tecnológicas para dar la mejor solución en cada proyecto" />
         <link rel="canonical" href="https://www.codents.net/" />
         <meta property="og:url"                content="https://www.codents.net" />
+        <body className="home-page" />
       </Helmet>
         <header>
           <Logo />

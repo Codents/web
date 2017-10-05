@@ -11,6 +11,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 import Router from './router';
 import logger from './middleware/logger';
+import cssGlobal from './modules/styleGlobal.scss';
 import { en, es } from './assets/locales';
 
 console.log('ENVIRONMENT VARS %s %s %s %s %s', TARGET, PLATFORM, VERSION, REST_API, LANGUAJE);

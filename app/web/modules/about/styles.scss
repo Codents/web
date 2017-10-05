@@ -1,7 +1,19 @@
-.about-page {
+section.about-page {
   position: absolute;
   height: auto;
   width: 60%;
   right: 2%;
   bottom: 10%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  section.about-page {
+    position: relative;
+    width: 90%;
+    margin-left:5%;
+    right: auto;
+    bottom: auto;
+
+  }
+
 }

@@ -18,6 +18,7 @@ class AboutContainer extends Component {
           <meta property="og:title"              content="Codents_ Quiénes somos" />
           <meta property="og:description"        content="Codents_ Quiénes somos" />
           <meta property="og:url"                content="https://www.codents.net/about" />
+          <body className="about-page" />
         </Helmet>
         <Bioinfo />
         <Linkedin />
